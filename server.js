@@ -8,6 +8,11 @@ app.use(cors());
 const intern = require('./data/internData');
 const leaderBoard = require('./data/leaderBoardData');
 
+app.get('/', (req, res) => {
+    res.send('App Loaded');
+});
+
+
 app.get('/api/intern' , (req , res) => {
     res.json(intern);
 })
